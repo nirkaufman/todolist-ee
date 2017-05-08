@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'td-root',
-  template: `
-  <h1>
-    {{title}}
-  </h1>
+  template: `      
+   <td-todolist></td-todolist>   
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'td works!';
+
 }
