@@ -1,8 +1,7 @@
-import {Component, Input, ChangeDetectionStrategy} from "@angular/core";
-import {Item} from "../item";
+import {Component, Input} from '@angular/core';
+import {Item} from '../item';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'td-items',
   template: `
     <ul class="todo-list">
@@ -15,6 +14,5 @@ export class ItemsComponent {
 
   @Input()
   public items: Item[];
-
 
 }

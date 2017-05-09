@@ -13,8 +13,7 @@ export class ItemsService {
   }
 
   public addItem(title: string): void {
-    // this.items.push(new Item(title));
-    this.items = [...this.items, new Item(title)];
+    this.items.push(new Item(title));
   }
 
   public removeItem(item: Item): void {

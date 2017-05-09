@@ -16,7 +16,7 @@ import {ItemsService} from "./items.service";
       </td-main>
 
       <td-footer>
-        <td-counter count="9"></td-counter>
+        <td-counter [count]="items.getItems() | countBy:'completed':false "></td-counter>
         <td-action-btn></td-action-btn>
       </td-footer>
 

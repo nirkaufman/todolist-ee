@@ -4,15 +4,16 @@ import {Item} from '../item';
 @Component({
   selector: 'td-item',
   template: `
-    <li>
+    <li [ngClass]="getClass()">
       <div class="view">
         <input class="toggle"
                [checked]="item.completed"
+               (change)="item.completed = $event.target.checked"
                type="checkbox">
-        <label>{{ item.title }}</label>
+        <label (dblclick)="item.isEditing = true">{{ item.title }} {{ item.created | date:'short' }}</label>
         <button class="destroy"></button>
       </div>
-      <input class="edit">
+      <input (keydown.esc)="item.isEditing = false" class="edit">
     </li>
   `
 })
@@ -21,7 +22,12 @@ export class ItemComponent {
   @Input()
   public item: Item;
 
-  @Output()
-  public destroy = new EventEmitter<Item>();
+  getClass() {
+    return {
+      'completed': this.item.completed,
+      'editing': this.item.isEditing,
+    };
+  }
+
 
 }

@@ -11,10 +11,13 @@ import {ItemComponent} from './item/item.component';
 import {CounterComponent} from './counter/counter.component';
 import {TitleComponent} from './title/title.component';
 import {ActionBtnComponent} from './action-btn/action-btn.component';
-import {ItemsService} from "./items.service";
+import {ItemsService} from './items.service';
+import { UpPipe } from './up.pipe';
+import { CountByPipe } from './count-by.pipe';
+import {UtilsModule} from "../utils/utils.module";
 
 @NgModule({
-  imports     : [CommonModule],
+  imports     : [CommonModule, UtilsModule],
   declarations: [
     TodolistComponent,
     HeaderComponent,
@@ -26,7 +29,9 @@ import {ItemsService} from "./items.service";
     ItemComponent,
     CounterComponent,
     TitleComponent,
-    ActionBtnComponent
+    ActionBtnComponent,
+    UpPipe,
+    CountByPipe
   ],
   providers   : [ItemsService],
   exports     : [TodolistComponent]
