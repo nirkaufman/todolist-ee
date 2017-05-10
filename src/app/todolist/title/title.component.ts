@@ -2,7 +2,11 @@ import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'td-title',
-  template: '<h1 tdTalk>{{ title }}</h1>',
+  template: `
+    <input type="checkbox"
+           (change)="flag =!flag">
+    <h1>{{ title }}</h1>
+  `,
 })
 export class TitleComponent {
 

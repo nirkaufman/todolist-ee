@@ -1,11 +1,18 @@
 import {Item} from './item';
+import {Http, Headers} from '@angular/http';
+import {Injectable} from '@angular/core';
 
+
+@Injectable()
 export class ItemsService {
 
   private items: Item[];
 
-  constructor() {
+  constructor(http: Http) {
     this.items = [];
+
+    // http.get('https://jsonplaceholder.typicode.com/todos')
+    //     .subscribe(result => this.items = result.json());
   }
 
   public getItems(): Item[] {

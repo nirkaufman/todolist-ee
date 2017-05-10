@@ -1,5 +1,4 @@
-import {Directive, ElementRef, Renderer2, Renderer, HostListener} from '@angular/core';
-import {renderDetachView} from "@angular/core/src/view/view_attach";
+import {Directive, ElementRef, Renderer2} from "@angular/core";
 
 @Directive({
   selector: '[tdTalk]'

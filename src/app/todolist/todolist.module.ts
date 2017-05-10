@@ -14,10 +14,11 @@ import {ActionBtnComponent} from './action-btn/action-btn.component';
 import {ItemsService} from './items.service';
 import { UpPipe } from './up.pipe';
 import { CountByPipe } from './count-by.pipe';
-import {UtilsModule} from "../utils/utils.module";
+import {UtilsModule} from '../utils/utils.module';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
-  imports     : [CommonModule, UtilsModule],
+  imports     : [CommonModule, UtilsModule, HttpModule],
   declarations: [
     TodolistComponent,
     HeaderComponent,
